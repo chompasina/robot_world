@@ -3,9 +3,9 @@ require_relative '../test_helper'
 class RobotDirectoryTest < Minitest::Test
   include TestHelpers
 
-  def current_robot_id
-    robot_directory.all.first.id
-  end
+  # def current_robot_id
+  #   robot_directory.all.first.id
+  # end
 
   def test_it_creates_a_robot
     assert_equal 0, robot_directory.all.count
