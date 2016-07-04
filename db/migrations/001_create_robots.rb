@@ -14,4 +14,5 @@ environments.each do |env|
                     department VARCHAR(64)
                   );")
   puts "Creating the database for #{env}"
+
 end

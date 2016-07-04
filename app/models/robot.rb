@@ -16,4 +16,9 @@ class Robot
     @hire       = data["date_hired"]
     @department = data["department"]
   end
+
+  def age
+    split = birthdate.split('/')
+    Time.now.year - split[2].to_i
+  end
 end

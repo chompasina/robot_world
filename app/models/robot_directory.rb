@@ -48,20 +48,9 @@ class RobotDirectory
     database.execute("DELETE FROM robots;")
   end
 
-  # def birthdates
-  #   birthdates = database.execute("SELECT birthdate FROM robots;")
-  #   split_dates = birthdates.flatten
-  #     @dates = split_dates.collect! do |date|
-  #       date.split('/')
-  #     end
-  # end
-  #
-  # def birthyears
-  #   just_years = @dates.collect! do |single_year|
-  #     single_year[2]
-  #   end
-  #   @final_birth = just_years.flatten
-  # end
+
+
+
 
   #   year_now = Time.now.utc.to_date.year
   #   age = @final_birth.collect! do |birthyear|
@@ -71,13 +60,10 @@ class RobotDirectory
   #   @avg_age = age.reduce(:+)/age.count
   # # end
   def average_age
-
     birthyears = all.map do |robot|
-      Time.now.year - Time.new(robot.birthdate).year
-      require "pry"; binding.pry
+      robot.age
     end
-    sum_of_ages = birthyears.reduce(:+)
-    average = sum_of_ages / birthyears.count
+    average = birthyears.reduce(:+)/ birthyears.count
     average
   end
   #

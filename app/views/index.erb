@@ -3,8 +3,13 @@
   <% @robots.each do |robot| %>
     <img alt="personal robot's image" src="https://robohash.org/<%= robot.name %>"/>
     <h3><%= robot.id %>: <a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
-    <p><%= robot.city robot.state robot.department %></p>
-<!--I'd like to add in city and state here, and maybe age  -->
+    <p><%= robot.birthdate %></p>
+    <p><%= robot.city %></p>
+    <p><%= robot.state %></p>
+    <p><%= robot.hire %></p>
+    <p><%= robot.department %></p>
+
+
     <a href="/robots/<%= robot.id %>/edit">Edit</a>
 
 
