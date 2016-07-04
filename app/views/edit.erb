@@ -1,0 +1,14 @@
+<form action="/robots/<%= @robot.id %>" method="post">
+
+  <p>Edit your robot's information:</p>
+  <input type="hidden" name="_method" value="PUT">
+  <textarea type="text" name="robot[name]" value="" placeholder="Name"></textarea>
+  <textarea name="robot[city]" value="" placeholder="City"></textarea>
+  <textarea name="robot[state]" value="" placeholder="State"></textarea>
+  <textarea name="robot[birthdate]" value="" placeholder="Birthdate"></textarea>
+  <textarea name="robot[hire]" value="" placeholder="Date Hired"></textarea>
+  <textarea name="robot[department]" value="" placeholder="Department"></textarea>
+  <input type="submit" name="Submit">
+  <p>Any blank text boxes will remain the same.</p>
+
+  </form>

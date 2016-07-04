@@ -1,0 +1,21 @@
+
+<body>
+  <div class="row" align="center">
+  <h1>Welcome to Robot World!</h1>
+    <div>
+      <ul>
+      <div class="btn-group">
+        <a href="/robots"><button type="button" class="btn btn-success">Robot Directory</button></a>
+        <a href="/robots/new"><button type="button" class="btn btn-success">New Robot</button></a>
+      </div>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Robot Statistics</h3>
+  <p>Average Robot Age: <%= @average_age %></p>
+  <p>Robots Hired By Year: <%= @by_year %></p>
+  <p>Robots By City: <%= @by_city %></p>
+  <p>Robots By State: <%= @by_state %></p>
+  <p>Robots By Department: <%= @by_department %></p>
+  </body>
