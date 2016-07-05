@@ -13,6 +13,7 @@ class UserDeletesARobotTest < FeatureTest
 
     assert_equal "/robots", current_path
     assert page.has_content?("Casey Metz")
+
     refute page.has_content?("Logan Metz")
   end
 end

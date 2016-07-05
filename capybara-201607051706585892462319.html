@@ -1,4 +1,14 @@
-<form action="/robots/<%= @robot.id %>" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/application.css">
+  <link rel='stylesheet' href='bootstrap.css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <title>Robot World</title>
+</head>
+<body>
+  <div class="container">
+    <form action="/robots/28" method="post">
 
   <p>Edit your robot's information:</p>
   <input type="hidden" name="_method" value="PUT">
@@ -14,3 +24,7 @@
   <p>Any blank text boxes will remain the same.</p>
 
   </form>
+
+  </div>
+</body>
+</html>

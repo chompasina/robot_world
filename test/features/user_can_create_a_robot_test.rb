@@ -22,9 +22,11 @@ class UserCanCreateARobotTest < FeatureTest
     click_button("Submit")
     assert_equal "/robots", current_path
     # Then I should see the list of robots and an All robots header
-    assert_equal '/robots', current_path
-    assert page.has_css?("#name")
-    assert page.has_content?("All robots")
+    save_and_open_page
+    within("#Robotsina") do
+      assert page.has_content?("Robotsina")
+    end
+    assert page.has_content?("All Robots")
 
   end
 end

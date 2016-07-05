@@ -49,6 +49,13 @@ class RobotDirectory
   end
 
 
+  def average_age
+    birthyears = all.map do |robot|
+      robot.age
+    end
+    average = birthyears.reduce(:+)/ birthyears.count
+    average
+  end
 
 
 
@@ -59,13 +66,6 @@ class RobotDirectory
   #   age.flatten
   #   @avg_age = age.reduce(:+)/age.count
   # # end
-  def average_age
-    birthyears = all.map do |robot|
-      robot.age
-    end
-    average = birthyears.reduce(:+)/ birthyears.count
-    average
-  end
   #
   # def year_hired
   #   each_year = {}

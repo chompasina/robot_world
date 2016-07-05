@@ -15,15 +15,17 @@ class UserCanEditARobotTest < FeatureTest
     assert_equal "/robots/#{robot_directory.all.first.id}/edit", current_path
 
     fill_in "robot[name]", with: "Princess Leah"
+    save_and_open_page
+    # [name] is used here to demonstrate form being filled
     fill_in "robot[city]", with: "Orlando"
     fill_in "robot[state]", with: "FL"
     fill_in "robot[birthdate]", with: "03/30/2000"
-    fill_in "robot[date_hired]", with: "02/01/2010"
+    fill_in "robot[hire]", with: "02/01/2010"
     fill_in "robot[department]", with: "Pie Making"
-    click_button("Edit")
+    click_button("Edit Robot")
 
     assert_equal "/robots/#{robot_directory.all.first.id}", current_path
     assert page.has_content?("Pie Making")
-    refute page.has_content?("Princess Leah")
+    assert page.has_content?("Princess Leah")
   end
 end

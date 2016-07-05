@@ -11,3 +11,11 @@
 <p><%= @robot.department %></p>
 
 <p><%= @robot.birthdate %></p>
+
+
+<a href="/robots/<%= @robot.id %>/edit">Edit</a>
+
+<form action="/robots/<%= @robot.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="name" value="Delete Robot">
+</form>

@@ -5,7 +5,8 @@ class RobotDirectoryApp < Sinatra::Base
 
   get '/' do
     @robots = robot_directory.all
-    @average = robot_directory.average_age
+    @average = robot_directory.average_age unless robot_directory.all.size == 0
+    #won't set the instance variable if it's nil (falsey)
     # @by_year = robot_directory.year_hired
     # @by_department = robot_directory.department
     # @by_city = robot_directory.city
@@ -40,7 +41,7 @@ class RobotDirectoryApp < Sinatra::Base
 
   put '/robots/:id' do |id|
     robot_directory.update(id.to_i, params[:robot])
-    redirect '/robots'
+    redirect "/robots/#{id}"
   end
 
   delete '/robots/:id' do |id|

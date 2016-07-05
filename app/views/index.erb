@@ -1,14 +1,15 @@
 <h1 id="title">All Robots</h1>
   <div id="robot_list">
   <% @robots.each do |robot| %>
-    <img alt="personal robot's image" src="https://robohash.org/<%= robot.name %>"/>
-    <h3><%= robot.id %>: <a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
-    <p><%= robot.birthdate %></p>
-    <p><%= robot.city %></p>
-    <p><%= robot.state %></p>
-    <p><%= robot.hire %></p>
-    <p><%= robot.department %></p>
-
+    <div id="<%= robot.name %>">
+      <img alt="personal robot's image" src="https://robohash.org/<%= robot.name %>"/>
+      <h3><%= robot.id %>: <a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
+      <p><%= robot.birthdate %></p>
+      <p><%= robot.city %></p>
+      <p><%= robot.state %></p>
+      <p><%= robot.hire %></p>
+      <p><%= robot.department %></p>
+    </div>
 
     <a href="/robots/<%= robot.id %>/edit">Edit</a>
 
