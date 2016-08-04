@@ -1,1 +1,3 @@
-# robot_world
+# Robot World
+
+This project allowed me to practice CRUD with a "Robot World" user interface. Users on this site are able to see all robots, see one specific robot, edit or update a robot, create a robot and delete a robot. I used the Faker Gem to generate robot names, departments, age, date hired, and location. Images were generated using Robohash and the generated Faker names. Additionally, I provide statistics on the robots for their average age, hiring of robots per year, and the number of robots in each department, city, and state. 
